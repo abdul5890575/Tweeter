@@ -1,0 +1,31 @@
+.articlehead {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  display: flex;
+  width: 75vw;
+  flex-direction:column;
+  padding: 20px;
+} 
+
+.articlehead img {
+  width: 100px;
+  height: auto;
+  padding-right: 15px;
+}
+
+.tweetheader {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+hr {
+    width: 70vw;
+    border-width:3px
+}
+
+/* .articlehead:hover{
+
+}
+ */

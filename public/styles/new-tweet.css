@@ -1,0 +1,40 @@
+textarea { 
+    outline: 0;
+    border-width: 0 0 3px;
+    border-color: black;
+    background-color: #f4f1ec;
+    height: 40px;
+    width: 75vw;
+}
+
+textarea:focus {
+    border-color: #4056A1;
+}
+
+.new-tweet {
+
+  padding: 20px;
+}
+
+.formbottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3px;
+}
+
+button {
+    background-color: #4056A1;
+    font-size: 25px;
+    font-family: 'Bungee', sans-serif;
+    color: white;
+    padding: 6px;
+}
+
+.counter {
+    font-family: 'Bungee', sans-serif;
+}
+
+.counter2 {
+    font-family:  sans-serif;
+    color:red;
+}

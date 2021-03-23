@@ -1,0 +1,22 @@
+nav {
+    height: 120px;
+    width: 100vw;
+    color: #FFFFFF;
+    background-color: #4056A1 ;
+    font-family: 'Bungee', sans-serif;
+    display: flex;
+    align-items: center;
+    padding:1.5em;
+    justify-content :space-between;
+  
+}
+
+.name {
+    font-size: 50px;
+  
+}  
+
+.navRight {
+    font-size: 25px;
+  
+}

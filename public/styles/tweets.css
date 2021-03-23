@@ -8,6 +8,10 @@
   padding: 20px;
 } 
 
+.articlehead:hover{
+    box-shadow: 10px 10px grey;
+}
+
 .articlehead img {
   width: 100px;
   height: auto;
@@ -22,10 +26,35 @@
 
 hr {
     width: 70vw;
-    border-width:3px
+    border-width:3px;
 }
 
-/* .articlehead:hover{
-
+.rightname {
+    margin-left: auto;
+    visibility: hidden;
 }
- */
+
+.articlehead:hover .rightname{
+    visibility: visible;
+}
+
+.articlebody p {
+  padding: 5px 5px 0px 5px;
+  display: flex;
+}
+
+.articlefooter {
+    display: flex;
+}
+
+.articlefooter p{
+    font-size: small;
+}
+
+.icons{
+    margin-left: auto;
+}
+
+.articlefooter div{
+    font-size: small;
+}

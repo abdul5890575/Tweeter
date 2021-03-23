@@ -1,4 +1,4 @@
-header {
+body > header {
     height: 400px;
     background-color: #f7aa36;
     background-image: url("https://www.transparenttextures.com/patterns/nasty-fabric.png");
@@ -7,6 +7,7 @@ header {
     justify-content:center;
     align-items:center;
     width: 100vw;
+    margin-top: 115px;
 }
 
 .username {

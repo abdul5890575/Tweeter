@@ -8,6 +8,8 @@ nav {
     align-items: center;
     padding:1.5em;
     justify-content :space-between;
+    position: fixed;
+    top: 0;
   
 }
 

@@ -16,6 +16,7 @@ const escape =  function(str) {
 }
 
 const createTweetElement = (tweetObj) => {
+  
   const tweet = `<article class="articlehead">
                          <header class="tweetheader">
                         <img src="${tweetObj['user']['avatars']}">
@@ -27,7 +28,7 @@ const createTweetElement = (tweetObj) => {
                         <hr>
                       </section>
                       <footer class="articlefooter">
-                        <p>10 days ago</p>
+                        <p>${new Date(tweetObj['created_at']).toLocaleString()}</p>
                         <div class="icons">
                           <i class="fas fa-flag"></i>
                           <i class="fas fa-retweet"></i>

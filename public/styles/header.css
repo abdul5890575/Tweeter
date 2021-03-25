@@ -14,3 +14,15 @@ body > header {
     color: white;
     font-size: 30px;
 }
+
+@media only screen and (min-width: 1024px) {
+  
+body > header {
+    width: 30vw;
+    margin: 60px;
+    margin-top: -250px;
+ 
+    
+}
+
+}  

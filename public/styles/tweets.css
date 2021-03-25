@@ -60,3 +60,14 @@ hr {
     font-size: small;
 }
 
+@media only screen and (min-width: 1024px) {
+  
+.articlehead {  
+    width: 55vw;
+}  
+
+hr {
+  width: 50vw
+}
+ 
+}  

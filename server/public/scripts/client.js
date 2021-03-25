@@ -7,10 +7,6 @@
 $(document).ready(() => {
   loadTweets();
   $('form').on('submit', handleSubmit);
- 
-  $(".navRight").click(function(){
-    $("form").slideToggle();
-  });
 });
 
 const escape =  function(str) {
@@ -47,7 +43,6 @@ const createTweetElement = (tweetObj) => {
 
 const renderTweets = function(data) {
   $('#tweet-container').empty();
-  $("form").hide();
   for (let userobj of data) {
     let $tweet = createTweetElement(userobj);
     $('#tweet-container').prepend($tweet);

@@ -20,12 +20,5 @@ nav {
 
 .navRight {
     font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   
-}
-
-.navRight:hover {
-    color: red;
 }

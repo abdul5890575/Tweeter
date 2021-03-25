@@ -5,22 +5,25 @@
  */
 
 $(document).ready(() => {
-  // $('#errorlong').hide()
-  // $('#errornull').hide()
-  loadTweets()
-  $('form').on('submit', handleSubmit)
+  loadTweets();
+  $('form').on('submit', handleSubmit);
+});
 
-})
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 const createTweetElement = (tweetObj) => {
-    const tweet = `<article class="articlehead">
+  const tweet = `<article class="articlehead">
                          <header class="tweetheader">
                         <img src="${tweetObj['user']['avatars']}">
                         <h3>${tweetObj['user']['name']}</h3>
                         <div class="rightname">${tweetObj['user']['handle']}</div>
                       </header>
                       <section class="articlebody">
-                        <p>${tweetObj['content']['text']}</p>
+                        <p>${escape(tweetObj['content']['text'])}</p>
                         <hr>
                       </section>
                       <footer class="articlefooter">
@@ -31,28 +34,28 @@ const createTweetElement = (tweetObj) => {
                           <i class="fas fa-heart"></i>
                         </div>
                       </footer>
-                      </article>`
+                      </article>`;
   
-    return tweet; 
-}
+  return tweet;
+};
 
 
 const renderTweets = function(data) {
   $('#tweet-container').empty();
   for (let userobj of data) {
     let $tweet = createTweetElement(userobj);
-    $('#tweet-container').prepend($tweet)
+    $('#tweet-container').prepend($tweet);
   }
-}
+};
 
-const handleSubmit = function (event)  {
+const handleSubmit = function(event)  {
   event.preventDefault();
   let data = $(this).serialize();
   
-  if( $('#tweet-text').val() === '') {
-    $('#errornull').slideDown()
+  if ($('#tweet-text').val() === '') {
+    $('#errornull').slideDown();
   } else if ($('#tweet-text').val().length > 140) {
-    $('#errorlong').slideDown()
+    $('#errorlong').slideDown();
   } else {
     
     $.ajax({
@@ -61,25 +64,29 @@ const handleSubmit = function (event)  {
       data: data
     })
       .then(res => {
-        console.log('sent to tweets', res)
+        console.log('sent to tweets', res);
         loadTweets();
+        $('#tweet-text').val('') 
+        $('.counter').text(140)
+               
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
-}
+};
 
 const loadTweets = () =>{
-  $('#errorlong').hide()
-  $('#errornull').hide()
+  $('#errorlong').hide();
+  $('#errornull').hide();
   $.ajax({
     url: "/tweets",
     method: "GET"
   })
     .then(res => {
-      renderTweets(res)
+      renderTweets(res);
     })
-    .catch(err => console.log(err))
-}
+    .catch(err => console.log(err));
+};
+
 
 
 

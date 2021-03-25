@@ -19,10 +19,7 @@ body > header {
   
 body > header {
     width: 30vw;
-    margin: 60px;
-    margin-top: -250px;
- 
-    
+    margin :200px 60px 60px 60px;
 }
 
 }  

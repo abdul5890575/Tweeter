@@ -38,3 +38,12 @@ button {
     font-family:'Bungee',sans-serif;
     color:red;
 }
+
+.error {
+    border-color: #e06363;
+    border-width: 5px;
+    background-color: #e81f1fa3;
+    padding: 15px;
+    border-radius: 5px;
+    border-style: solid;
+}

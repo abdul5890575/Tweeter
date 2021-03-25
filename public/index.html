@@ -45,7 +45,13 @@
     
     <main class="container">
       <section class="new-tweet">
-        <form method="POST" action="/tweets/">
+        <section id='errorlong' class="error">
+          <div>Sorry your character limit exceeds the max limit</div>
+        </section>
+        <section id='errornull' class="error">
+          <div>Sorry you cannot leave the tweet empty</div>
+        </section>
+        <form >
           <label for="tweet-text">What are you humming about?</label>
           <br>
           <textarea name="text" id="tweet-text"></textarea>
@@ -55,25 +61,8 @@
           </div>
         </form>
       </section>
-      <article class="articlehead">
-        <header class="tweetheader">
-          <img src="./images/lawyer.png">
-          <h3>Rhoda Jacob</h3>
-          <div class="rightname">@Rhoades</div>
-        </header>
-        <section class="articlebody">
-          <p>If I have Seen furthur it by standing on the shoulders of giant.</p>
-          <hr>
-        </section>
-        <footer class="articlefooter">
-          <p>10 days ago</p>
-          <div class="icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+      <section id='tweet-container'>
+      </section>
     </main>
   </body>
 </html>

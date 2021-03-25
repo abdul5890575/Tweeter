@@ -6,6 +6,7 @@
   width: 75vw;
   flex-direction:column;
   padding: 20px;
+  margin-bottom: 20px;
 } 
 
 .articlehead:hover{
@@ -58,3 +59,4 @@ hr {
 .articlefooter div{
     font-size: small;
 }
+

@@ -54,6 +54,11 @@ hr {
 
 .icons{
     margin-left: auto;
+    visibility: hidden;
+}
+
+.articlehead:hover .icons{
+    visibility: visible;
 }
 
 .articlefooter div{

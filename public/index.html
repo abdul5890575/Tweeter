@@ -7,6 +7,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Fonts CDN-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -30,8 +31,8 @@
   <body>
     <nav>
       <div class="name">TWEETER</div>
-      <div class="navRight"> Write <span style="font-family: Source Sans Pro, sans-serif"></span>  Write a new tweet</span>
-      <i class="fas fa-angle-double-down"></i>
+      <div class="navRight"> Write  <span style="font-family:Source Sans Pro, sans-serif"> a new tweet</span>
+      <!-- <i class="fas fa-angle-double-down"></i> -->
       </div>
     </nav>
    
@@ -46,6 +47,10 @@
     </header>
 
     <!-- Page-specific (main) content here -->
+    <!-- //creates up arrow icon -->
+    <div>
+      <button id="scroll"><i class="material-icons">arrow_upward</i></button>
+    </div>
     
     <main class="container">
       <section class="new-tweet">
@@ -71,3 +76,13 @@
   </body>
 </html>
 
+<!-- scroll functionality -->
+<script>
+  $('#scroll').on('click',()=>{
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    })
+  })
+</script>

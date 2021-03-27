@@ -19,6 +19,17 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
+const ChangeTimetoDays = function(timeCreated) {
+  let todayTimeinMS = new Date().getTime();
+  let difference = todayTimeinMS - timeCreated;
+  let days = Math.floor(difference / (1000 *60 * 60 *24))
+  if (days < 1 ){
+    return "Posted Today"
+  } else {
+    return `Posted ${days} days ago`
+  }
+}
+
 const createTweetElement = (tweetObj) => {
   
   const tweet = `<article class="articlehead">
@@ -32,7 +43,7 @@ const createTweetElement = (tweetObj) => {
                         <hr>
                       </section>
                       <footer class="articlefooter">
-                        <p>${new Date(tweetObj['created_at']).toLocaleString()}</p>
+                        <p>${ChangeTimetoDays(tweetObj['created_at'])}</p>
                         <div class="icons">
                           <i class="fas fa-flag"></i>
                           <i class="fas fa-retweet"></i>
@@ -43,6 +54,8 @@ const createTweetElement = (tweetObj) => {
   
   return tweet;
 };
+// new Date(tweetObj['created_at']).toLocaleString()
+// new Date(tweetObj['created_at']).toLocaleDateString('en-gb')
 
 
 const renderTweets = function(data) {
